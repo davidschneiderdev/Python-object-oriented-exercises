@@ -1,6 +1,21 @@
 
 from random import randint
 
+# Classes are for:
+# bundling related data (like a dictionary)
+# with the functions that modify that data
+
+# Encapsulation - hiding the details about how something is done (usually inside of methods)
+# Encapsulation, alternate definition - bundling related data along with functions that use and modify that data.
+
+# Inheritance - making specialized versions of classes.
+
+# Polymorphism - methods can interact with lots of different kinds of objects, and it doesn't care what Class created it.
+
+# Composition - not stuffing everything into a single class. Instead make classes that help other classes. Create specialized objects that cooperate with each other.
+
+
+
 class Cat:
     # In __init__ python allows you to refer to 
     # the object as its being created
@@ -21,6 +36,14 @@ class Cat:
         else:
             print(f"Bad touch, bad touch!")
 
+    def receive_toy(self, toy):
+        # You can add new properties to an object in any method
+        # not just __init__()
+        self.toy = toy
+
+    def play_with_toy(self):
+        print(f"{self.name} plays with {self.toy.name}")
+        self.happiness += self.toy.quality
     
 milla = Cat("Milla")
 oakley = Cat("Oakley") # Use the class to create a new Cat "instance"
