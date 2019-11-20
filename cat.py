@@ -1,5 +1,6 @@
 
 from random import randint
+from toy import Toy
 
 # Classes are for:
 # bundling related data (like a dictionary)
@@ -47,7 +48,6 @@ class Cat:
     
 milla = Cat("Milla")
 oakley = Cat("Oakley") # Use the class to create a new Cat "instance"
-
 
 
 
